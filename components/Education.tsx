@@ -23,19 +23,19 @@ const CERT_SKILLS = [
 const Education: React.FC = () => {
   return (
     <div className="w-full">
-      <SectionHeading index="06" title="Education" />
+      <SectionHeading index="04" title="Education" />
 
       <div className="divide-y divide-white/10 border-t border-b border-white/10">
         <Reveal direction="left" amount={0.2} className="py-9 sm:py-10">
           <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-6">
             <h3 className="text-lg sm:text-xl font-display font-medium text-white">
-              York University — Lassonde School of Engineering
+              York University, Lassonde School of Engineering
             </h3>
-            <span className="text-white/30 text-xs shrink-0">2024 — Present</span>
+            <span className="text-white/30 text-xs shrink-0">2024 to Present</span>
           </div>
 
           <p className="text-white/55 text-sm sm:text-base leading-relaxed max-w-2xl mb-6">
-            BSc, Specialized Honours in Computer Science. I learn by doing — coursework covers algorithms,
+            BSc, Specialized Honours in Computer Science. I learn by doing. Coursework covers algorithms,
             systems, and web development, and I apply all of it to real projects outside class.
           </p>
 
@@ -51,11 +51,11 @@ const Education: React.FC = () => {
             <h3 className="text-lg sm:text-xl font-display font-medium text-white">
               Google Data Analytics Professional Certificate
             </h3>
-            <span className="text-white/30 text-xs shrink-0">2025 — Present</span>
+            <span className="text-white/30 text-xs shrink-0">2025 to Present</span>
           </div>
 
           <p className="text-white/55 text-sm sm:text-base leading-relaxed max-w-2xl mb-6">
-            Strengthening SQL, data cleaning, and visualization skills — complements the data work I do at Mondelēz.
+            Strengthening SQL, data cleaning, and visualization skills to complement the data work I do at Mondelēz.
           </p>
 
           <div className="flex flex-wrap gap-x-5 gap-y-2 text-xs text-white/35">

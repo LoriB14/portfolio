@@ -19,7 +19,7 @@ const EXPERIENCES: ExperienceItem[] = [
     title: 'Data & Digitalization Co-op (IL6S)',
     company: 'Mondelēz International',
     location: 'Toronto, ON',
-    period: 'May 2026 — Present',
+    period: 'May 2026 to Present',
     bullets: [
       'Working with the Integrated Lean Six Sigma (IL6S) team on digitalization and process improvement initiatives within a manufacturing environment.',
       'Supporting the development of new systems/software and KPI digitalization to improve visibility into operations.',
@@ -29,9 +29,9 @@ const EXPERIENCES: ExperienceItem[] = [
   {
     id: 2,
     title: 'Lead Web Developer',
-    company: 'Self-employed · Freelance',
+    company: 'Freelance',
     location: 'Toronto, ON · Remote',
-    period: 'Dec 2025 — Present',
+    period: 'Dec 2025 to Present',
     bullets: [
       "Designed and developed a full-stack e-commerce platform using Next.js and Supabase, launching the company's first digital storefront.",
       'Integrated Stripe API for secure payment processing, enhancing transaction workflows.',
@@ -43,7 +43,7 @@ const EXPERIENCES: ExperienceItem[] = [
     title: 'Office Administrator',
     company: 'The Wellness Group Aurora',
     location: 'Aurora, Ontario',
-    period: 'June 2022 — Present',
+    period: 'June 2022 to Present',
     bullets: [
       'Provided comprehensive administrative and technical support.',
       'Troubleshot software, printer, and network issues to ensure seamless operations.',
@@ -55,7 +55,7 @@ const EXPERIENCES: ExperienceItem[] = [
     title: 'QA Testing & UX/UI Analyst Intern',
     company: 'Yadag Technologies Inc.',
     location: 'Remote',
-    period: 'May 2026 — Jul 2026',
+    period: 'May 2026 to Jul 2026',
     bullets: [
       'Designed and executed manual test cases across browsers and device sizes, identifying UI and functional defects.',
       'Ran UX/UI analysis sessions, flagging friction points and delivering structured feedback to product and dev teams.',
@@ -68,7 +68,7 @@ const EXPERIENCES: ExperienceItem[] = [
     title: 'Product Research Consultant (Fintech)',
     company: 'Qupay Corporation',
     location: 'Remote',
-    period: 'Jan 2026 — Mar 2026',
+    period: 'Jan 2026 to Mar 2026',
     bullets: [
       'Conducted structured interviews with small business owners across Canada to analyze payment workflows.',
       'Identified operational friction points to enhance user experience and streamline processes.',

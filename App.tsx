@@ -6,16 +6,12 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
-import Reflections from './components/Reflections';
-import Goals from './components/Goals';
 import Skills from './components/Skills';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
 import CursorSpotlight from './components/CursorSpotlight';
-import LightningEffect from './components/LightningEffect';
 import AuroraLayer from './components/AuroraLayer';
-import CyberBackground from './components/CyberBackground';
 
 const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -25,7 +21,7 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'experience', 'projects', 'reflections', 'goals', 'education', 'skills', 'contact'];
+      const sections = ['home', 'about', 'experience', 'projects', 'education', 'skills', 'contact'];
       const scrollPos = window.scrollY + 200;
 
       for (const section of sections) {
@@ -51,15 +47,9 @@ const App: React.FC = () => {
     <div className="min-h-screen overflow-x-hidden px-4 sm:px-6 md:px-8 bg-slate-950 text-white">
       <div className="fixed inset-0 bg-gradient-to-b from-transparent via-purple-500/[0.03] to-transparent pointer-events-none" />
 
-      {/* Ambient cyberspace atmosphere — same layout as before, just alive behind it */}
       <AuroraLayer />
-      <CyberBackground />
 
-      {/* One shared light source for the whole page */}
       <CursorSpotlight />
-
-      {/* Occasional cinematic lightning — see LightningEffect for the full sequence */}
-      <LightningEffect />
 
       {/* Scroll progress — a hairline, not a bar */}
       <motion.div
@@ -86,14 +76,6 @@ const App: React.FC = () => {
 
         <section id="projects" className="py-28 sm:py-36 px-6 max-w-6xl mx-auto">
           <Projects />
-        </section>
-
-        <section id="reflections" className="py-28 sm:py-36 px-6 max-w-6xl mx-auto">
-          <Reflections />
-        </section>
-
-        <section id="goals" className="py-28 sm:py-36 px-6 max-w-6xl mx-auto">
-          <Goals />
         </section>
 
         <section id="education" className="py-28 sm:py-36 px-6 max-w-6xl mx-auto">

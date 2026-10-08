@@ -24,8 +24,8 @@ export const PROJECTS: Project[] = [
     role: "Lead Developer",
     status: "Live / Maintained",
     technicalDetails: "React front end + Gemini for intent classification. Mapping via Leaflet/OpenStreetMap with accessible tiles. A small cache layer keeps critical resource data available offline and handles degraded connectivity.",
-    demoUrl: "#",
-    repoUrl: "#"
+    demoUrl: "",
+    repoUrl: "https://github.com/LoriB14/6ixAssist"
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ export const PROJECTS: Project[] = [
     image: wealthQuestLogo,
     tags: ["React", "Next.js", "Phaser", "TypeScript"],
     description: "Wealth Quest is a retro, life-choice game that teaches kids financial literacy through everyday decisions.",
-    detailedDescription: "Feb 2026 — Created during ElleHacks 2026. Players explore a pixel-art city and make choices around spending, saving, and investing, with simple, kid-friendly feedback that explains real money concepts. The game was built using React + Next.js with Phaser for the top-down world, focusing on clarity, accessibility, and playful learning. Inspired by Wealthsimple's mission to make money education more approachable.",
+    detailedDescription: "Feb 2026. Created during ElleHacks 2026. Players explore a pixel-art city and make choices around spending, saving, and investing, with simple, kid-friendly feedback that explains real money concepts. The game was built using React + Next.js with Phaser for the top-down world, focusing on clarity, accessibility, and playful learning. Inspired by Wealthsimple's mission to make money education more approachable.",
     features: [
       "Pixel-art City Exploration",
       "Financial Literacy Education",
@@ -45,7 +45,7 @@ export const PROJECTS: Project[] = [
     status: "Hackathon Project",
     technicalDetails: "Built using React + Next.js for the framework and Phaser for the game engine. Focus on accessibility and educational engagement.",
     demoUrl: "https://ellehacks2026.vercel.app/",
-    repoUrl: "#"
+    repoUrl: "https://github.com/LoriB14/wealthquest"
   },
   {
     id: 3,
@@ -63,7 +63,7 @@ export const PROJECTS: Project[] = [
     ],
     role: "Full Stack Developer",
     status: "Live Deployment",
-    technicalDetails: "Next.js (App Router) with server‑side rendering and incremental static regeneration. Tailwind CSS design system, Lighthouse‑friendly performance budgets. Hosted on Vercel for automatic scaling and CDN edge caching.",
+    technicalDetails: "Next.js (App Router) with server-side rendering and incremental static regeneration. Tailwind CSS design system, Lighthouse-friendly performance budgets. Hosted on Vercel for automatic scaling and CDN edge caching.",
     demoUrl: "https://pegasus-zeta.vercel.app/",
     repoUrl: ""
   },
@@ -74,7 +74,7 @@ export const PROJECTS: Project[] = [
     image: packPalLogo,
     tags: ["Next.js", "Gemini 2.5", "NextAuth", "TypeScript", "Drizzle ORM", "PostgreSQL", "Tailwind CSS", "Vercel"],
     description: "An AI packing assistant that builds a smart checklist based on your trip, the weather, and what you are planning to do.",
-    detailedDescription: "Oct 2025 — Developed a Next.js + TypeScript app that uses Gemini 2.5 to generate personalized packing lists based on destination, dates, forecast, and itinerary. Implemented secure authentication with NextAuth and modeled data using Drizzle ORM on PostgreSQL. Added collaborative planning and real‑time checklist sync via Next.js Server Actions. Deployed on Vercel with a custom GoDaddy domain for demos (NewHacks 2025).",
+    detailedDescription: "Oct 2025. Developed a Next.js + TypeScript app that uses Gemini 2.5 to generate personalized packing lists based on destination, dates, forecast, and itinerary. Implemented secure authentication with NextAuth and modeled data using Drizzle ORM on PostgreSQL. Added collaborative planning and real-time checklist sync via Next.js Server Actions. Deployed on Vercel with a custom GoDaddy domain for demos (NewHacks 2025).",
     features: [
       "Smart Packing Lists (Gemini 2.5)",
       "Weather Integration",
@@ -83,73 +83,33 @@ export const PROJECTS: Project[] = [
     ],
     role: "Full Stack Developer",
     status: "In Progress",
-    technicalDetails: "Next.js + TypeScript. NextAuth for auth, Drizzle ORM + PostgreSQL for persistence. Server Actions for real‑time data refresh. Target deployment on Vercel.",
+    technicalDetails: "Next.js + TypeScript. NextAuth for auth, Drizzle ORM + PostgreSQL for persistence. Server Actions for real-time data refresh. Target deployment on Vercel.",
     demoUrl: "",
-    repoUrl: ""
+    repoUrl: "https://github.com/LoriB14/PackPal.fit"
   },
   {
     id: 5,
-    title: "GO STATION TRACKER",
-    category: "DATA VISUALIZATION (COMING SOON)",
-    image: "https://placehold.co/800x450/FFFFFF/c026d3/png?text=COMING+SOON&font=montserrat",
-    tags: ["Python", "Flask", "SQLite", "Chart.js", "JavaScript", "HTML/CSS"],
-    description: "A dashboard that shows parking availability at GO stations in real time. Built to help commuters know if there is a spot before they leave.",
-    detailedDescription: "Sept 2025 — Created a parking lot tracker that pulls real‑time data from existing public sources and maps it to the lot IDs commuters already recognize. The Flask backend schedules ingestion and normalizes data into SQLite, exposing a small REST API. The frontend presents open vs. occupied lots and historical capacity trends with Chart.js. Designed for clarity and quick decision‑making on the way to the station.",
+    title: "YADAG",
+    category: "QA / CLIENT PROJECT",
+    image: "https://placehold.co/800x450/0f172a/c026d3/png?text=YADAG&font=montserrat",
+    tags: ["Manual Testing", "UX/UI Analysis", "AWS Cognito", "Riipen"],
+    description: "QA and bug testing for an agri-workforce platform. Wrote test cases, found bugs, and documented issues across multiple features.",
+    detailedDescription: "Worked as a QA tester on Yadag's agri-workforce platform through a Riipen work-integrated learning project. Designed and ran manual test cases across onboarding, housing, training, and authentication features. Logged bugs, tracked issues through to resolution, and flagged UX problems to the product team.",
     features: [
-      "Real-time Data Polling",
-      "Historical Trend Analysis",
-      "Responsive Visualization",
-      "Low-bandwidth Mode"
+      "Manual test case design and execution",
+      "Cross-feature regression testing",
+      "Bug logging and issue tracking",
+      "UX feedback to product team"
     ],
-    role: "Solo Developer",
-    status: "Archived",
-    technicalDetails: "Flask REST API with a background scheduler for data ingestion, SQLite for storage, Chart.js for visualization.",
-    demoUrl: "",
+    role: "QA Testing & UX/UI Analyst",
+    status: "Completed",
+    technicalDetails: "Manual testing across onboarding, housing, training, and workforce modules, plus the AWS Cognito auth migration.",
+    demoUrl: "https://yadag.io/",
     repoUrl: ""
   },
   {
     id: 6,
-    title: "CROWDFLOW",
-    category: "CAMPUS / REAL-TIME DATA (IN PROGRESS)",
-    image: "https://placehold.co/800x450/0f172a/c026d3/png?text=CROWDFLOW&font=montserrat",
-    tags: ["Next.js", "Supabase", "TypeScript", "Tailwind CSS"],
-    description: "A crowd-level tracker for York University's busiest spaces — built to help students see which buildings are quiet before they head over.",
-    detailedDescription: "A personal project estimating real-time crowd levels across five York campus buildings (Vari Hall, Scott Library, Bergeron Centre, Central Square, Ross Building). A Node backend models hourly crowd profiles per building and writes live readings to Supabase every 30 seconds; the Next.js frontend is the next piece being built out to surface that data as a simple live dashboard.",
-    features: [
-      "Per-building hourly crowd modeling",
-      "Live data pipeline (Supabase, 30s interval)",
-      "Next.js + Tailwind frontend (in progress)",
-      "Built for York's own campus buildings"
-    ],
-    role: "Solo Developer",
-    status: "In Progress",
-    technicalDetails: "Node.js backend script models and writes crowd-level readings to Supabase on a timer. Next.js 16 + Tailwind frontend scaffolded; dashboard UI in progress.",
-    demoUrl: "",
-    repoUrl: ""
-  },
-  {
-    id: 7,
-    title: "YADAG — QA & AUTH TESTING",
-    category: "QA / CLIENT PROJECT",
-    image: "https://placehold.co/800x450/0f172a/c026d3/png?text=YADAG&font=montserrat",
-    tags: ["Manual Testing", "UX/UI Analysis", "AWS Cognito", "Riipen"],
-    description: "Structured QA engagement testing authentication, onboarding, housing, and training features for an agri-workforce platform, run as a Riipen work-integrated learning project.",
-    detailedDescription: "Designed and executed manual test plans across five feature areas — onboarding, housing, training, workforce/LMIA compliance, and the AWS Cognito authentication migration — documenting results and defects for each. Worked within a structured Riipen team (Project Lead / Research Lead / Strategy Lead / Ops Lead / Comms Lead roles) with a shared decision log to track testing priorities and findings as the product moved through staging.",
-    features: [
-      "Manual test case design & execution",
-      "Cross-feature regression testing",
-      "Structured defect documentation",
-      "Team decision log & role-based workflow"
-    ],
-    role: "QA Testing & UX/UI Analyst",
-    status: "Ongoing",
-    technicalDetails: "Testing across onboarding, housing, training, and workforce/LMIA modules, plus the AWS Cognito auth migration (JWT-based sign-in replacing the prior token system).",
-    demoUrl: "",
-    repoUrl: ""
-  },
-  {
-    id: 8,
-    title: "OWNING MY — GROWTH STRATEGY",
+    title: "OWNING MY GROWTH STRATEGY",
     category: "RIIPEN / STRATEGY CONSULTING",
     image: "https://placehold.co/800x450/0f172a/c026d3/png?text=OWNING+MY&font=montserrat",
     tags: ["Riipen", "Project Coordination", "Growth Strategy", "Client Advisory"],
@@ -162,8 +122,8 @@ export const PROJECTS: Project[] = [
       "Final growth strategy report for the client"
     ],
     role: "Project Lead",
-    status: "Completed, Mar – Apr 2026",
-    technicalDetails: "Riipen Labs work-integrated learning project — market and strategy analysis culminating in a client-facing growth recommendation (not software development).",
+    status: "Completed, Mar to Apr 2026",
+    technicalDetails: "Riipen Labs work-integrated learning project. Market and strategy analysis culminating in a client-facing growth recommendation (not software development).",
     demoUrl: "",
     repoUrl: ""
   }
