@@ -1,26 +1,29 @@
+import type { CSSProperties } from 'react';
 
-import React from 'react';
-import Reveal from './Reveal';
-import SectionHeading from './SectionHeading';
+const STATEMENT =
+  "I'm a third-year Computer Science student at *York *University, on co-op at *Mondelēz *International building software that changes how the company manages its operational data. Outside of work I build full-stack products as a freelance developer, including *6ixAssist, an AI tool that won *first *place at ElleHacks.";
 
-const About: React.FC = () => {
+export default function About() {
+  const words = STATEMENT.split(' ');
   return (
-    <div className="w-full">
-      <SectionHeading index="01" title="About" />
-
-      <Reveal direction="up" className="space-y-5 text-base sm:text-lg text-white/60 leading-relaxed max-w-[60ch]">
-        <p>
-          I'm a third-year Computer Science student at York University, currently on co-op at Mondelēz International.
-          I work on the IL6S team developing new software that changes the way the company manages and stores its operational data,
-          as well as digitalization projects that modernize how the business tracks and reports on its operations.
+    <section className="about" id="about" aria-labelledby="about-h" style={{ ['--n' as string]: words.length } as CSSProperties}>
+      <div className="sticky">
+        <h2 id="about-h" className="sr">About</h2>
+        <p className="statement">
+          {words.map((w, i) => {
+            const hl = w.startsWith('*');
+            return (
+              <span key={i} className={`w${hl ? ' hl' : ''}`} style={{ ['--i' as string]: i } as CSSProperties}>
+                {hl ? w.slice(1) : w}{' '}
+              </span>
+            );
+          })}
         </p>
-        <p>
-          Outside of my co-op, I build full-stack products as a freelance developer and have led projects that shipped to real users,
-          including 6IXASSIST, an AI tool that won first place at ElleHacks 2025.
-        </p>
-      </Reveal>
-    </div>
+        <div className="about-foot mono">
+          <span>About</span>
+          <span>Toronto, Canada</span>
+        </div>
+      </div>
+    </section>
   );
-};
-
-export default About;
+}

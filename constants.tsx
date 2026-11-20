@@ -1,7 +1,6 @@
 
 import sixAssistLogo from './Logos/6ixAssist_logo.png';
 import pegasusLogo from './Logos/PegasusCover.png';
-import packPalLogo from './Logos/PackPal.png';
 import wealthQuestLogo from './Logos/Wealth Quest pixel art logo.png';
 
 import { Project, SkillGroup } from './types';
@@ -69,46 +68,26 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 4,
-    title: "PACKPAL 🚧",
-    category: "AI / TRAVEL (COMING SOON)",
-    image: packPalLogo,
-    tags: ["Next.js", "Gemini 2.5", "NextAuth", "TypeScript", "Drizzle ORM", "PostgreSQL", "Tailwind CSS", "Vercel"],
-    description: "An AI packing assistant that builds a smart checklist based on your trip, the weather, and what you are planning to do.",
-    detailedDescription: "Oct 2025. Developed a Next.js + TypeScript app that uses Gemini 2.5 to generate personalized packing lists based on destination, dates, forecast, and itinerary. Implemented secure authentication with NextAuth and modeled data using Drizzle ORM on PostgreSQL. Added collaborative planning and real-time checklist sync via Next.js Server Actions. Deployed on Vercel with a custom GoDaddy domain for demos (NewHacks 2025).",
+    title: "THE WELLNESS GROUP",
+    category: "FRONTEND / CLIENT PROJECT",
+    image: "https://placehold.co/800x450/0f172a/c026d3/png?text=THE+WELLNESS+GROUP&font=montserrat",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Gemini API", "Vite", "Railway"],
+    description: "A full frontend website built for The Wellness Group Aurora, the wellness clinic I work at — featuring a wellness shop, AI health recommendations, staff profiles, blog, and JaneApp booking.",
+    detailedDescription: "Built the entire frontend for The Wellness Group Aurora, a multi-discipline health clinic in Aurora, ON. The site covers 10+ services (physiotherapy, chiropractic, massage, acupuncture, naturopathy, and more), profiles for 20+ practitioners, a blog, and direct billing info. I also built a full embedded wellness shop with product cards, a cart drawer, checkout modal, and order confirmation. Added an AI triage feature powered by the Gemini API that helps patients describe their symptoms and get service recommendations. Deployed on Railway with a custom Express server.",
     features: [
-      "Smart Packing Lists (Gemini 2.5)",
-      "Weather Integration",
-      "Collaborative Planning",
-      "Real-time Sync"
+      "Embedded Wellness Shop (cart, checkout, order confirmation)",
+      "AI Health Triage powered by Gemini API",
+      "20+ Staff Profiles & 10+ Service Pages",
+      "Blog, Billing Info & JaneApp Booking Integration"
     ],
-    role: "Full Stack Developer",
-    status: "In Progress",
-    technicalDetails: "Next.js + TypeScript. NextAuth for auth, Drizzle ORM + PostgreSQL for persistence. Server Actions for real-time data refresh. Target deployment on Vercel.",
-    demoUrl: "",
-    repoUrl: "https://github.com/LoriB14/PackPal.fit"
-  },
-  {
-    id: 5,
-    title: "YADAG",
-    category: "QA / CLIENT PROJECT",
-    image: "https://placehold.co/800x450/0f172a/c026d3/png?text=YADAG&font=montserrat",
-    tags: ["Manual Testing", "UX/UI Analysis", "AWS Cognito", "Riipen"],
-    description: "QA and bug testing for an agri-workforce platform. Wrote test cases, found bugs, and documented issues across multiple features.",
-    detailedDescription: "Worked as a QA tester on Yadag's agri-workforce platform through a Riipen work-integrated learning project. Designed and ran manual test cases across onboarding, housing, training, and authentication features. Logged bugs, tracked issues through to resolution, and flagged UX problems to the product team.",
-    features: [
-      "Manual test case design and execution",
-      "Cross-feature regression testing",
-      "Bug logging and issue tracking",
-      "UX feedback to product team"
-    ],
-    role: "QA Testing & UX/UI Analyst",
-    status: "Completed",
-    technicalDetails: "Manual testing across onboarding, housing, training, and workforce modules, plus the AWS Cognito auth migration.",
-    demoUrl: "https://yadag.io/",
+    role: "Frontend Developer",
+    status: "Live Deployment",
+    technicalDetails: "React 19 + TypeScript + Tailwind CSS, bundled with Vite. Gemini API (@google/genai) powers the AI recommendations. Cart and auth state managed via React Context. Deployed on Railway with an Express static server.",
+    demoUrl: "https://www.thewellnessgroupaurora.com",
     repoUrl: ""
   },
   {
-    id: 6,
+    id: 5,
     title: "OWNING MY GROWTH STRATEGY",
     category: "RIIPEN / STRATEGY CONSULTING",
     image: "https://placehold.co/800x450/0f172a/c026d3/png?text=OWNING+MY&font=montserrat",

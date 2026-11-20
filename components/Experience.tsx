@@ -1,8 +1,5 @@
-
-import React, { useState } from 'react';
-import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
-import Reveal from './Reveal';
-import SectionHeading from './SectionHeading';
+import { useState } from 'react';
+import Split from './Split';
 
 interface ExperienceItem {
   id: number;
@@ -77,72 +74,40 @@ const EXPERIENCES: ExperienceItem[] = [
   },
 ];
 
-const ease = [0.16, 1, 0.3, 1] as const;
-
-const Experience: React.FC = () => {
-  const [openId, setOpenId] = useState<number | null>(null);
-  const shouldReduceMotion = useReducedMotion();
-
+export default function Experience() {
+  const [open, setOpen] = useState<number | null>(null);
   return (
-    <div className="w-full">
-      <SectionHeading index="02" title="Experience" />
-
-      <div className="divide-y divide-white/10 border-t border-b border-white/10">
-        {EXPERIENCES.map((exp, index) => {
-          const isOpen = openId === exp.id;
+    <section className="sec cream" id="experience" aria-labelledby="xp-h">
+      <div className="sec-top mono">
+        <span>Experience</span>
+        <span>{String(EXPERIENCES.length).padStart(2, '0')} roles</span>
+      </div>
+      <h2 id="xp-h" className="sec-title display" data-reveal style={{ marginBottom: 'clamp(24px, 3.4vw, 48px)' }}>
+        <Split text="Where I've worked" by="word" step={80} />
+      </h2>
+      <div>
+        {EXPERIENCES.map((x) => {
+          const isOpen = open === x.id;
           return (
-            <Reveal key={exp.id} direction={index % 2 === 0 ? 'left' : 'right'} amount={0.2}>
-              <div>
-                <button
-                  onClick={() => setOpenId(isOpen ? null : exp.id)}
-                  className="w-full text-left py-6 sm:py-7 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 group"
-                  aria-expanded={isOpen}
-                >
-                  <span className="font-mono text-xs text-white/30 shrink-0 sm:w-32">{exp.period}</span>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-base sm:text-lg font-display font-medium text-white group-hover:text-fuchsia-200 transition-colors">
-                      {exp.title}
-                    </h3>
-                    <p className="text-white/40 text-sm mt-0.5">{exp.company} · {exp.location}</p>
-                  </div>
-                  <motion.span
-                    animate={{ rotate: isOpen ? 45 : 0 }}
-                    transition={{ duration: 0.4, ease }}
-                    className="shrink-0 w-6 h-6 rounded-full border border-white/15 flex items-center justify-center text-white/40"
-                  >
-                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.75" d="M12 4v16m8-8H4" />
-                    </svg>
-                  </motion.span>
-                </button>
-
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: shouldReduceMotion ? 0.2 : 0.45, ease }}
-                      className="overflow-hidden"
-                    >
-                      <ul className="pb-7 sm:pl-[8.5rem] space-y-2.5 max-w-2xl">
-                        {exp.bullets.map((bullet, i) => (
-                          <li key={i} className="flex items-start gap-3 text-sm text-white/55 leading-relaxed">
-                            <span className="text-fuchsia-400/40 mt-1.5 text-[5px] shrink-0">●</span>
-                            {bullet}
-                          </li>
-                        ))}
-                      </ul>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+            <div key={x.id} className={`xp-row${isOpen ? ' open' : ''}`}>
+              <button type="button" className="xp-btn" aria-expanded={isOpen} aria-controls={`xp-${x.id}`} onClick={() => setOpen(isOpen ? null : x.id)}>
+                <span className="when mono">{x.period}</span>
+                <span>
+                  <span className="role">{x.title}</span>
+                  <span className="co">{x.company}</span>
+                </span>
+                <span className="loc mono">{x.location}</span>
+                <span className="pm" aria-hidden="true" />
+              </button>
+              <div className="xp-body" id={`xp-${x.id}`}>
+                <div>
+                  <ul>{x.bullets.map((b) => <li key={b}>{b}</li>)}</ul>
+                </div>
               </div>
-            </Reveal>
+            </div>
           );
         })}
       </div>
-    </div>
+    </section>
   );
-};
-
-export default Experience;
+}
